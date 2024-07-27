@@ -49,6 +49,7 @@
 	//         }
 	//     }
 	// },
+	},
 	"cmake": {
 		"command": "cmake-language-server",
 		"filetypes": ["cmake"],
@@ -58,8 +59,7 @@
 		"initializationOptions": {
 			"buildDirectory": "build"
 		}
-	}
-    }
+	},
 	"suggest.floatConfig": {
 		"border": true,
 		"highlight": "MyFloatBorder",
