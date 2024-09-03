@@ -6,19 +6,19 @@ highlight MyFloatBorder guifg=#76ABAE guibg=#31363F
 highlight MyDiagnosticFloat guifg=#A0153E guibg=#31363F
 
 set termguicolors
-autocmd VimEnter * call s:setup_lualine()
-function! s:setup_lualine() abort
-lua<<EOF
-require("bufferline").setup{
-  options = {
-    indicator = {
-      style = 'none',
-    },
-    diagnostics = "coc",
-  }
-}
-EOF
-endfunction
+
+" set termguicolors
+
+" lua<<EOF
+" require("bufferline").setup{
+" 	highlights = {
+" 		buffer_visible = {
+" 			fg = '#ecebf0',
+" 			bg = '#1a0b54',
+" 		},
+" 	}
+" }
+" EOF
 
 " Overwrite some color highlight 
 if (has("autocmd"))

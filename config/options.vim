@@ -15,6 +15,17 @@ set noswapfile
 
 syntax on
 
+" Font
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
+
 " Optimize 
 set synmaxcol=3000    "Prevent breaking syntax hightlight when string too long. Max = 3000"
 set lazyredraw
@@ -32,7 +43,6 @@ autocmd FileChangedShellPost *
     \ | echo "File changed on disk. Buffer reloaded."
     \ | echohl None
 
-let mapleader = ";"
 set encoding=UTF-8
 
 " clipboard

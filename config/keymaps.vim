@@ -2,16 +2,17 @@
 " => Key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 
+let mapleader = ";"
 " Delete word
-nnoremap dw vb"_d
+nnoremap dw diw
 
 " Select all with Ctrl-a
 nnoremap <C-a> gg<S-v>G
 
 " New tab
-nnoremap <leader>te :tabedit 
-nnoremap <tab> :tabnext<CR>
-nnoremap <s-tab> :tabprev<CR>
+" nnoremap <leader>te :tabedit 
+" nnoremap <tab> :tabnext<CR>
+" nnoremap <s-tab> :tabprev<CR>
 
 " Window split
 nnoremap ss :split<CR>
@@ -27,12 +28,20 @@ nmap <M-Up> :resize -1<CR>
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 nmap /\ :noh<CR>
 
-" Markdown preview
-nmap <C-s> <Plug>MarkdownPreview
-nmap <M-s> <Plug>MarkdownPreviewStop
-nmap <C-p> <Plug>MarkdownPreviewToggle
+" Replace hightlighted text
+vnoremap <C-R> "hy:%s/<C-r>h//gc<left><left><left>
 
-nnoremap <leader>l :nohlsearch<CR>
+" Markdown preview
+" nmap <C-s> <Plug>MarkdownPreview
+" nmap <M-s> <Plug>MarkdownPreviewStop
+nmap <leader>tm <Plug>MarkdownPreviewToggle
+
+" Move between buffers
+nmap ]b :bnext<CR>
+nmap [b :bprev<CR>
+
+" Close buffer without closing the Window
+nmap <leader>bd :bp<bar>sp<bar>bn<bar>bd<CR>
 
 " Map <leader>td to toggle diagnostics with notification
 nnoremap <silent> <leader>td :call ToggleCocDiagnostics()<CR>
@@ -40,8 +49,8 @@ nnoremap <silent> <leader>td :call ToggleCocDiagnostics()<CR>
 " Map <leader>tb to toggle buffer diagnostics with notification
 nnoremap <silent> <leader>tb :call ToggleBufferDiagnostics()<CR>
 
-" Map <leader>s to toggle Coc suggestions
-nnoremap <silent> <leader>s :call ToggleCocSuggestions()<CR>
+" Map <leader>ts to toggle Coc suggestions
+nnoremap <silent> <leader>ts :call ToggleCocSuggestions()<CR>
 
 " Repace visual text
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>

@@ -38,6 +38,6 @@ call plug#end()
 for setting_file in split(glob(stdpath('config').'/config/*.vim'))
   execute 'source' setting_file
 endfor
-for setting_file in split(glob(stdpath('config').'/plugin/*.vim'))
+for setting_file in split(glob(stdpath('config').'/plugins/*.vim'))
   execute 'source' setting_file
 endfor
