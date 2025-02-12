@@ -1,0 +1,212 @@
+{
+	"cmake.pinnedCommands": [
+		"workbench.action.tasks.configureTaskRunner",
+		"workbench.action.tasks.runTask"
+	],
+	"files.exclude": {
+		"**/.git": false
+	},
+	"git.autofetch": false,
+
+	// Theme
+	"workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+	"workbench.settings.editor": "json",
+	"workbench.colorTheme": "Monokai Pro",
+	"editor.fontFamily": "JetBrainsMonoNL Nerd Font, CaskaydiaMono NFM, Consolas, 'Courier New', monospace",
+	"editor.fontSize": 18,
+	"editor.autoClosingBrackets": "beforeWhitespace",
+	"editor.minimap.enabled": false,
+	"window.menuBarVisibility": "compact",
+	"chat.commandCenter.enabled": false,
+	"workbench.navigationControl.enabled": false,
+	"workbench.layoutControl.enabled": false,
+
+	// Scrolling
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.smoothScrolling": true,
+	"workbench.list.smoothScrolling": true,
+	"terminal.integrated.smoothScrolling": true,
+	"editor.cursorBlinking": "smooth",
+
+	// Terminal
+	"terminal.integrated.defaultProfile.windows": "PowerShell",
+	"terminal.external.windowsExec": "C:\\Users\\datle\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe",
+
+	// Zenmode settings
+	"zenMode.centerLayout": false,
+	"zenMode.hideLineNumbers": false,
+
+	// Vim settings
+	"vim.vimrc.enable": true,
+	"vim.leader": ";",
+	"vim.useSystemClipboard": true,
+	"vim.smartRelativeLine": false,
+	"vim.hlsearch": true,
+	"extensions.experimental.affinity": {
+		"vscodevim.vim": 1,
+		"asvetliakov.vscode-neovim": 1
+	},
+	"editor.cursorSurroundingLines": 4,
+	"editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+	"vim.handleKeys": {
+		"<C-d>": true,
+		"<C-k>": false,
+		"<C-o>": false,
+		"<C-h>": false,
+		"<C-p>": false
+	},
+	"vim.statusBarColorControl": true,
+	"vim.statusBarColors.normal": ["#171819", "#ffffff"],
+	"vim.statusBarColors.insert": ["#2C2E07", "#ffffff"],
+	"vim.statusBarColors.visual": ["#35151D", "#ffffff"],
+	"vim.statusBarColors.visualline": ["#35151D", "#ffffff"],
+	"vim.statusBarColors.visualblock": ["#35151D", "#ffffff"],
+	"vim.statusBarColors.commandlineinprogress": ["#2C2206", "#ffffff"],
+	"vim.statusBarColors.searchinprogressmode": ["#171819", "#ffffff"],
+	"vim.statusBarColors.surroundinputmode": ["#171819", "#ffffff"],
+
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": ["g", "p", "d"],
+			"commands": ["editor.action.peekDefinition"]
+		},
+		{
+			"before": ["g", "h"],
+			"commands": ["editor.action.showDefinitionPreviewHover"]
+		},
+		{
+			"before": ["g", "i"],
+			"commands": ["editor.action.goToImplementation"]
+		},
+		{
+			"before": ["g", "p", "i"],
+			"commands": ["editor.action.peekImplementation"]
+		},
+		{
+			"before": ["g", "r"],
+			"commands": ["editor.action.referenceSearch.trigger"]
+		},
+		{
+			"before": ["g", "t"],
+			"commands": ["editor.action.goToTypeDefinition"]
+		},
+		{
+			"before": ["g", "p", "t"],
+			"commands": ["editor.action.peekTypeDefinition"]
+		},
+		{
+			"before": ["<leader>", "r", "n"],
+			"commands": ["editor.action.rename"]
+		},
+		{
+			"before": ["<leader>", "c", "f"],
+			"commands": ["editor.action.formatDocument"]
+		},
+		// {
+		// 	"before": ["<leader>", "c", "s", "o"],
+		// 	"commands": ["outline.toggleVisibility"]
+		// },
+		// {
+		// 	"before": ["<leader>", "c", "s", "f"],
+		// 	"commands": ["outline.focus"]
+		// },
+		{
+			"before": ["<leader>", "f", "f"],
+			"commands": ["workbench.action.showAllEditors"]
+		},
+		{
+			"before": ["<leader>", "f", "s"],
+			"commands": ["workbench.action.findInFiles"]
+		},
+		{
+			"before": ["<leader>", "c", "a"],
+			"commands": ["editor.action.codeAction"]
+		},
+		{
+			"before": ["]", "q"],
+			"commands": ["editor.action.marker.next"]
+		},
+		{
+			"before": ["[", "q"],
+			"commands": ["editor.action.marker.prev"]
+		},
+		{
+			"before": ["<leader>", "b", "d"],
+			"commands": ["workbench.action.closeActiveEditor"]
+		},
+		{
+			"before": ["<leader>", "b", "a"],
+			"commands": ["workbench.action.closeAllEditors"]
+		},
+		{
+			"before": ["g", "r"],
+			"commands": ["editor.action.goToReferences"]
+		},
+		{
+			"before": ["<leader>", "t", "m"],
+			"commands": ["editor.action.toggleTabFocusMode"]
+		},
+		{
+			"before": ["H"], // Focus previous tab at the left
+			"commands": ["workbench.action.previousEditor"]
+		},
+		{
+			"before": ["L"], // Focus next tab at the right
+			"commands": ["workbench.action.nextEditor"]
+		}
+	],
+	"vim.visualModeKeyBindingsNonRecursive": [
+		{
+			"before": ["<leader>", "s"],
+			"commands": ["actions.find"]
+		},
+	],
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#171819",
+		"statusBar.noFolderBackground": "#171819",
+		"statusBar.debuggingBackground": "#171819",
+		"statusBar.foreground": "#ffffff",
+		"statusBar.debuggingForeground": "#ffffff"
+	},
+
+	// Format
+	"editor.formatOnSave": false,
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true,
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[cpp]": {
+		"editor.defaultFormatter": "xaver.clang-format"
+	},
+	// "clang-format.executable": "C:/Users/datle/scoop/apps/llvm/19.1.7/bin/clang-format.exe",  //for windows
+	"C_Cpp.clang_format_path": "/usr/bin/clang-format",	// for linux
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"remote.SSH.remotePlatform": {
+		"172.29.95.184": "linux"
+	},
+	"terminal.integrated.tabStopWidth": 4,
+	"window.titleBarStyle": "custom"
+	/*
+		.clang-format
+
+		BasedOnStyle: LLVM
+		IndentWidth: 4
+		ColumnLimit: 100
+		AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+		BreakBeforeBraces: Attach #Allman|Attach
+		AlignConsecutiveAssignments: false
+		AlignConsecutiveDeclarations: false
+		AlignConsecutiveMacros: true
+		AllowShortEnumsOnASingleLine: false
+
+	*/
+}
